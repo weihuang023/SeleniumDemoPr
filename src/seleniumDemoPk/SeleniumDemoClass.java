@@ -18,7 +18,7 @@ public class SeleniumDemoClass {
 	// declaration and instantiation of objects/variables
     WebDriver driver = new FirefoxDriver();
     WebDriverWait myWaitVar = new WebDriverWait(driver,10);
-    
+    //aaaaa
     String baseUrl = "http://www.facebook.com";
     String expectedTitle = "Facebook - Log In or Sign Up";
     String actualTitle = "";
