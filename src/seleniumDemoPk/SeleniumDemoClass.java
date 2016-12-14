@@ -76,9 +76,12 @@ public class SeleniumDemoClass {
     
     String alertMessage = "";
     driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-
+    
     driver.get("http://jsbin.com/usidix/1");
     driver.findElement(By.cssSelector("input[value=\"Go!\"]")).click();
+    if (myWaitVar.until(ExpectedConditions.alertIsPresent())!= null){
+    System.out.println("Alert is present!");
+    }
     alertMessage = driver.switchTo().alert().getText();
     driver.switchTo().alert().accept();
    
