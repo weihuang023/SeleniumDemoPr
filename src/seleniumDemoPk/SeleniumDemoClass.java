@@ -9,11 +9,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
+
 public class SeleniumDemoClass {
 	
     public static void main(String[] args) {
    
-    System.setProperty("webdriver.gecko.driver","C:\\Users\\weih8\\git\\Selenium-Driver\\geckodriver-v0.11.1-win64\\geckodriver.exe");
+    System.setProperty("webdriver.gecko.driver","C:\\Users\\loadtest\\Desktop\\Eclipse\\geckodriver.exe");
 	// declaration and instantiation of objects/variables
     WebDriver driver = new FirefoxDriver();
     WebDriverWait myWaitVar = new WebDriverWait(driver,10);
