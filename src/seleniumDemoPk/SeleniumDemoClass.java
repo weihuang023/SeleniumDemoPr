@@ -23,7 +23,7 @@ public class SeleniumDemoClass {
     String expectedTitle = "Facebook - Log In or Sign Up";
     String actualTitle = "";
 
-    // launch Firefox and direct it to the Base URL
+    // launch FF and direct it to the Base URL
     driver.get(baseUrl);
     // get the actual value of the title
     actualTitle = driver.getTitle();
