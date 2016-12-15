@@ -9,20 +9,21 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
+
 public class SeleniumDemoClass {
 	
     public static void main(String[] args) {
    
-    System.setProperty("webdriver.gecko.driver","C:\\Users\\weih8\\git\\Selenium-Driver\\geckodriver-v0.11.1-win64\\geckodriver.exe");
+    System.setProperty("webdriver.gecko.driver","C:\\Users\\loadtest\\Desktop\\Eclipse\\geckodriver.exe");
 	// declaration and instantiation of objects/variables
     WebDriver driver = new FirefoxDriver();
     WebDriverWait myWaitVar = new WebDriverWait(driver,10);
-    
+    //aaaaa
     String baseUrl = "http://www.facebook.com";
     String expectedTitle = "Facebook - Log In or Sign Up";
     String actualTitle = "";
 
-    // launch Firefox and direct it to the Base URL
+    // launch FF and direct it to the Base URL
     driver.get(baseUrl);
     // get the actual value of the title
     actualTitle = driver.getTitle();
@@ -76,9 +77,12 @@ public class SeleniumDemoClass {
     
     String alertMessage = "";
     driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-
+    
     driver.get("http://jsbin.com/usidix/1");
     driver.findElement(By.cssSelector("input[value=\"Go!\"]")).click();
+    if (myWaitVar.until(ExpectedConditions.alertIsPresent())!= null){
+    System.out.println("Alert is present!");
+    }
     alertMessage = driver.switchTo().alert().getText();
     driver.switchTo().alert().accept();
    
